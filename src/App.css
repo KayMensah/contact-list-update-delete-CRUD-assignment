@@ -1,5 +1,7 @@
 @import url(https://fonts.google.com/specimen/Source+Serif+Pro?query=serif);
-
+* {
+  background-color: lightgray;
+}
 .App {
   text-align: center;
 }
@@ -52,20 +54,45 @@
 }
 
 .form-style {
- 
-    color: rgb(36, 1, 1) !important;
-    font-size: 17px !important;
-    font-family: 'Work Sans', sans-serif;
-  
+  color: rgb(36, 1, 1) !important;
+  font-size: 17px !important;
+  font-family: "Work Sans", sans-serif;
+  margin-left: 30px;
+}
+.firstname-style {
+  padding: 5px;
+  margin-left: 40px;
+  margin-top: 5px;
+  width: 300px;
+}
+.email-style {
+  padding: 5px;
+  margin-left: 80px;
+  margin-top: 5px;
+  width: 300px;
+}
+.phone-style {
+  padding: 5px;
+  margin-left: 8px;
+  margin-top: 5px;
+  width: 300px;
+}
+.location-style {
+  padding: 5px;
+  margin-left: 58px;
+  margin-top: 5px;
+  width: 300px;
 }
 .input-style {
-    padding: 5px;
-    margin-left: 8px;
-  }
-.main-header {
-  font-family: 'Work Sans', sans-serif;
-  margin:20px;
+  padding: 5px;
+  margin-left: 40px;
+  margin-top: 5px;
+  width: 300px;
 }
-.butstyle {
- 
+.main-header {
+  font-family: "Work Sans", sans-serif;
+  margin: 20px;
+}
+.btn {
+  margin-left: 20px;
 }

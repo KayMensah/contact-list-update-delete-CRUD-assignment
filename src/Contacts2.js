@@ -2,24 +2,19 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
 const Contacts2 = (props) => {
- 
   const contact = props.contact;
 
-  
   const [isShowing, setIsShowing] = useState(false);
-
 
   const [name, setName] = useState(contact.name);
 
-  const [email, setEmail] = useState(contact.email)
- 
+  const [email, setEmail] = useState(contact.email);
+
   const [phoneNumber, setphoneNumber] = useState(contact.phoneNumber);
 
   const [location, setLocation] = useState(contact.location);
 
-  
   const handleEdit = () => {
-    
     const updatedContacts = {
       name: name,
       email: email,
@@ -28,10 +23,8 @@ const Contacts2 = (props) => {
       id: contact.id,
     };
 
-    
     props.editUser(contact.id, updatedContacts);
 
-  
     setIsShowing(false);
   };
 
@@ -51,7 +44,7 @@ const Contacts2 = (props) => {
           <Modal.Title>Update contact</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <label>Name</label>
+          <label>Name</label>
           <input
             type="text"
             value={name}
@@ -59,8 +52,8 @@ const Contacts2 = (props) => {
               setName(e.target.value);
             }}
           />
-        <label>Email</label>
-            <input
+          <label>Email</label>
+          <input
             type="email"
             // eslint-disable-next-line no-undef
             value={email}
@@ -69,7 +62,7 @@ const Contacts2 = (props) => {
               setEmail(e.target.value);
             }}
           />
-        <label>Phone Number</label>
+          <label>Phone Number</label>
           <input
             type="number"
             value={phoneNumber}
@@ -78,7 +71,7 @@ const Contacts2 = (props) => {
             }}
           />
           <label>Location</label>
-           <input
+          <input
             type="text"
             // eslint-disable-next-line no-restricted-globals
             value={location}
