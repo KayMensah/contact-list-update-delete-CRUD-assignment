@@ -83,7 +83,7 @@ const ContactForm2 = (props) => {
         <br />
 
         <button type="submit" className="btn btn-primary">
-          Add contact
+          Add contact now
         </button>
         <br />
       </form>
