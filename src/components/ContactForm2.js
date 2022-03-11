@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { addUserAction } from "../actions/action";
+import { useDispatch } from "react-redux";
 import { v4 as uuid } from "uuid";
 
 const ContactForm2 = (props) => {
@@ -7,33 +9,35 @@ const ContactForm2 = (props) => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setphoneNumber] = useState("");
   const [location, setLocation] = useState("");
+  const dispatch = useDispatch();
+  const submitForm = (e) => {
+    // console.log('Hit here')
+    e.preventDefault();
+
+    let newContact = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phoneNumber: phoneNumber,
+      location: location,
+      id: uuid(),
+    };
+
+    //call the correct action from redux
+    dispatch(addUserAction(newContact));
+
+    setfirstName("");
+    setlastName("");
+    setEmail("");
+    setphoneNumber("");
+    setLocation("");
+  };
 
   return (
     <div>
-      <form
-        className="form-style"
-        onSubmit={(e) => {
-          // console.log('Hit here')
-          e.preventDefault();
-
-          let newContact = {
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phoneNumber: phoneNumber,
-            location: location,
-            id: uuid(),
-          };
-          props.addContact(newContact);
-          setfirstName("");
-          setlastName("");
-          setEmail("");
-          setphoneNumber("");
-          setLocation("");
-        }}
-      >
+      <form className="form-style" onSubmit={submitForm}>
         <h5 className="contact-style">Update a contact</h5>
-        <label for="fname">First Name:</label>
+        <label>First Name:</label>
         <input
           className="firstname-style"
           id="fname"

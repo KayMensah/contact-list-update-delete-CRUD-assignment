@@ -68,54 +68,54 @@
 
 // export default Contact;
 
-import React, { useState } from "react";
-import { v4 as uuid } from "uuid";
+// import React, { useState } from "react";
+// import { v4 as uuid } from "uuid";
 
-const ContactForm2 = (props) => {
-  const [name, setName] = useState("");
-  const [phoneNumber, setphoneNumber] = useState("");
-  const [location, setLocation] = useState("");
+// const ContactForm2 = (props) => {
+//   const [name, setName] = useState("");
+//   const [phoneNumber, setphoneNumber] = useState("");
+//   const [location, setLocation] = useState("");
 
-  return (
-    <form
-      onSubmit={(e) => {
-        console.log("Hit here");
-        e.preventDefault();
+//   return (
+//     <form
+//       onSubmit={(e) => {
+//         console.log("Hit here");
+//         e.preventDefault();
 
-        let newContact = {
-          name: name,
-          phoneNumber: phoneNumber,
-          location: location,
-          id: uuid(),
-        };
-        props.addContact(newContact);
-        setName("");
-        setphoneNumber("");
-        setLocation("");
-      }}
-    >
-      <input
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="number"
-        placeholder="PhoneNumber"
-        value={phoneNumber}
-        onChange={(e) => setphoneNumber(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Location"
-        value={location}
-        onChange={(e) => setLocation(e.target.value)}
-      />
+//         let newContact = {
+//           name: name,
+//           phoneNumber: phoneNumber,
+//           location: location,
+//           id: uuid(),
+//         };
+//         props.addContact(newContact);
+//         setName("");
+//         setphoneNumber("");
+//         setLocation("");
+//       }}
+//     >
+//       <input
+//         type="text"
+//         placeholder="Name"
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//       />
+//       <input
+//         type="number"
+//         placeholder="PhoneNumber"
+//         value={phoneNumber}
+//         onChange={(e) => setphoneNumber(e.target.value)}
+//       />
+//       <input
+//         type="text"
+//         placeholder="Location"
+//         value={location}
+//         onChange={(e) => setLocation(e.target.value)}
+//       />
 
-      <button type="submit">Add contact</button>
-    </form>
-  );
-};
+//       <button type="submit">Add contact</button>
+//     </form>
+//   );
+// };
 
-export default ContactForm2;
+// export default ContactForm2;
